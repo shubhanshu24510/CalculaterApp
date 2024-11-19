@@ -33,7 +33,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(3))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+4*3)", writer.expression)
+        assertEquals("(5+4x3)", writer.expression)
     }
 
     @Test
@@ -48,7 +48,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Parenthesis)
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3))", writer.expression)
+        assertEquals("(5+(4x3))", writer.expression)
     }
 
     @Test
@@ -65,7 +65,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2)", writer.expression)
+        assertEquals("(5+(4x3)/2)", writer.expression)
     }
 
     @Test
@@ -85,7 +85,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2)", writer.expression)
+        assertEquals("(5+(4x3)/2x(2)", writer.expression)
     }
 
 
@@ -108,7 +108,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2/2)", writer.expression)
+        assertEquals("(5+(4x3)/2x(2/2)", writer.expression)
     }
 
     @Test
@@ -140,7 +140,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Parenthesis)
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2/2)+(5-(3*5))", writer.expression)
+        assertEquals("(5+(4x3)/2x(2/2)+(5-(3x5))", writer.expression)
     }
 
     @Test
@@ -174,7 +174,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2/2)+(5-(3*5)/2)", writer.expression)
+        assertEquals("(5+(4x3)/2x(2/2)+(5-(3x5)/2)", writer.expression)
 
     }
 
@@ -215,7 +215,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2/2)+(5-(3*5)/2*(2/2)", writer.expression)
+        assertEquals("(5+(4x3)/2x(2/2)+(5-(3x5)/2x(2/2)", writer.expression)
     }
 
     @Test
@@ -271,7 +271,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Number(2))
         writer.processAction(CalculaterAction.Parenthesis)
 
-        assertEquals("(5+(4*3)/2*(2/2)+(5-(3*5)/2*(2/2)+(5-(3*5)/2*(2/2)", writer.expression)
+        assertEquals("(5+(4x3)/2x(2/2)+(5-(3x5)/2x(2/2)+(5-(3x5)/2x(2/2)", writer.expression)
 
     }
 
@@ -363,7 +363,7 @@ class ExpressionWritterTest {
         writer.processAction(CalculaterAction.Parenthesis)
 
         assertEquals(
-            "(5+(4*3)/2*(2/2)+(5-(3*5)/2*(2/2)+(5-(3*5)/2*(2/2)+(5-(3*5)/2*(2/2)+(5-(3*5)/2*(2/2)",
+            "(5+(4x3)/2x(2/2)+(5-(3x5)/2x(2/2)+(5-(3x5)/2x(2/2)+(5-(3x5)/2x(2/2)+(5-(3x5)/2x(2/2)",
             writer.expression
         )
 

@@ -10,7 +10,7 @@ class ExpressionParserTest {
     @Test
     fun `parse simple expression`() {
         // Given
-        parser = ExpressionParser("3+5-3*4/3")
+        parser = ExpressionParser("3+5-3x4/3")
         // Do something here
         val actual = parser.parse()
         val expected = listOf(
@@ -30,7 +30,7 @@ class ExpressionParserTest {
 
     @Test
     fun `parse expression with parentheses`() {
-        parser = ExpressionParser("4-(4*5)")
+        parser = ExpressionParser("4-(4x5)")
         val actual = parser.parse()
 
         val expected = listOf(
@@ -59,7 +59,7 @@ class ExpressionParserTest {
 
     @Test
     fun `parse expression with all operations`() {
-        parser = ExpressionParser("1+2-3*4/5%6")
+        parser = ExpressionParser("1+2-3x4/5%6")
         val actual = parser.parse()
         val expected = listOf(
             ExpressionPart.Number(1.0),
