@@ -3,7 +3,7 @@ package com.shubhans.cicdcalculater.domain
 enum class Operation(val symbol: Char) {
     ADD('+'),
     SUBTRACT('-'),
-    MULTIPLY('*'),
+    MULTIPLY('x'),
     DIVIDE('/'),
     PERCENT('%')
 }

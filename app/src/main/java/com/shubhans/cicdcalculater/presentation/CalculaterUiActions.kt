@@ -2,11 +2,12 @@ package com.shubhans.cicdcalculater.presentation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import com.shubhans.cicdcalculater.domain.CalculaterAction
 import com.shubhans.cicdcalculater.domain.Operation
 
-val CalculationActions = listOf(
+val calculationActions = listOf(
     CalculaterUiAction(
         text = "AC",
         highlightLevel = HighlightLevel.Highlighted,
@@ -101,8 +102,8 @@ val CalculationActions = listOf(
         action = CalculaterAction.Decimal
     ),
     CalculaterUiAction(
-        text = "null,
-                highlightLevel = HighlightLevel . Neutral,
+        text = null,
+        highlightLevel = HighlightLevel.Neutral,
         action = CalculaterAction.Delete,
         content = {
             Icon(

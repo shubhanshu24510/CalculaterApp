@@ -1,12 +1,13 @@
 package com.shubhans.cicdcalculater.presentation
 
+import androidx.compose.runtime.Composable
 import com.shubhans.cicdcalculater.domain.CalculaterAction
 
 data class CalculaterUiAction(
     val text: String?,
     val highlightLevel: HighlightLevel,
     val action: CalculaterAction,
-    val content @Composable() -> Unit = {},
+    val content : @Composable () -> Unit = {},
 )
 
 sealed interface HighlightLevel {
