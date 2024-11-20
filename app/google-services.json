@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "912690826588",
+    "project_id": "calculaterapp-ab0cf",
+    "storage_bucket": "calculaterapp-ab0cf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912690826588:android:b849bc405499b0b2b40599",
+        "android_client_info": {
+          "package_name": "com.shubhans.cicdcalculater"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD65CV-5niqEEEnURho8OWECFNxcKDzQRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
