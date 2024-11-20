@@ -22,7 +22,15 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        create("staging") {
+            isMinifyEnabled = true
+            applicationIdSuffix = ".debugStaging"
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -47,6 +55,7 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    flavorDimensions += listOf("staging")
 }
 
 dependencies {
@@ -68,7 +77,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Unit Tests
+// Unit Tests
     testImplementation(libs.androidx.core)
     testImplementation(libs.junit)
     testImplementation(libs.androidx.core.testing)

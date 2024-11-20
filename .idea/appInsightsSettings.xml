@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.shubhans.cicdcalculater" />
+                  <option name="mobileSdkAppId" value="1:912690826588:android:b849bc405499b0b2b40599" />
+                  <option name="projectId" value="calculaterapp-ab0cf" />
+                  <option name="projectNumber" value="912690826588" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
